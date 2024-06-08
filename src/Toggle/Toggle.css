@@ -1,0 +1,59 @@
+.toggle {
+  --dimension: 24px;
+  --thumb-margin: 3px;
+  --length: calc(var(--dimension) * 2.5);
+  --toggle-length: calc(var(--dimension) * 1.5 - var(--thumb-margin) * 2);
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: var(--dimension);
+  border: 1px solid black;
+  width: calc(var(--length));
+  outline-offset: 1px;
+}
+
+.toggle.toggle--focused {
+  outline: 1px solid black;
+}
+
+.toggle__thumb {
+  height: var(--dimension);
+  width: var(--dimension);
+  margin: var(--thumb-margin);
+  border-radius: 50%;
+  background-color: black;
+  z-index: 1;
+  transform: translateX(0);
+}
+
+.toggle__thumb.theme-toggle__thumb--active {
+  transform: translateX(var(--toggle-length));
+}
+
+.toggle__background-icons {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.toggle__background-icon {
+  color: #fff;
+}
+
+.toggle__checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.toggle__checkbox:active + .toggle__thumb {
+  outline: 10px solid red;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
