@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from 'react'
-import './App.scss'
+import './App.css'
 import Toggle from './Toggle/Toggle'
 
 const App = () => {

@@ -1,7 +1,5 @@
 import cn from 'classnames'
 import './Toggle.css'
-import { useState } from 'react'
-import { IconType } from 'react-icons'
 
 type ChangeHandler =
   | (() => void)
@@ -19,9 +17,9 @@ interface IToggleProps {
 }
 
 const Toggle = ({
-  size,
+  size = 14,
   margin,
-  isChecked,
+  isChecked = false,
   onChange,
   parentStyles,
   animated = true,
