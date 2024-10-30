@@ -1,6 +1,6 @@
 # WIP!
 
-Easy to style, easy to resize toggle!
+Easy to style, easy to resize!
 
 ## Props
 
